@@ -18,14 +18,12 @@ class KaraokeLocal:
 			self.lista = cHandler.get_tags()
 
 	def listaordenada(self):
-		caracter = "\."
-		barra = caracter.split('.')[0]
 		for etiquetas in self.lista:
 			atr = []
 			for atributo in etiquetas:
 				if atributo != 'element' and etiquetas[atributo] != '':
 					atr.append(atributo + '="' + etiquetas[atributo] + '"')
-			print(etiquetas['element']+ barra + barra.join(atr)+ '\t\n')
+			print(etiquetas['element'] + '\t' + '\t'.join(atr))
 
 
 	def to_json(self, fichero, fichero_json=""):
