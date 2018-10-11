@@ -52,11 +52,3 @@ if __name__ == "__main__":
 	fichero.do_local()
 	fichero.to_json(sys.argv[1], 'local.json')
 	fichero.listaordenada()
-
-
-		
-
-
-
-
-
