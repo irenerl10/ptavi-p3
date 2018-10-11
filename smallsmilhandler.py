@@ -30,5 +30,5 @@ if __name__ == "__main__":
 	parser = make_parser()
 	cHandler = SmallSMILHandler()
 	parser.setContentHandler(cHandler)
-	parser.parse(open(sys.argv[1])) #Aqui debe ir karaoke.smil pero tengo windows
+	parser.parse(open('karaoke.py') #sys.argv[1]) para windows
 	print(cHandler.get_tags())
