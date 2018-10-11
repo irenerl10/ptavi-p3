@@ -15,15 +15,17 @@ class KaraokeLocal:
 			cHandler = SmallSMILHandler()
 			parser.setContentHandler(cHandler)
 			parser.parse(open(fichero)) 
-			self.lista = cHandler.get_tags()		
+			self.lista = cHandler.get_tags()
 
 	def listaordenada(self):
+		caracter = "\."
+		barra = caracter.split('.')[0]
 		for etiquetas in self.lista:
 			atr = []
 			for atributo in etiquetas:
 				if atributo != 'element' and etiquetas[atributo] != '':
 					atr.append(atributo + '="' + etiquetas[atributo] + '"')
-			print(etiquetas['element'] + '\t' + '\t'.join(atr))
+			print(etiquetas['element']+ barra + barra.join(atr)+ '\t\n')
 
 
 	def to_json(self, fichero, fichero_json=""):
