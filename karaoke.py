@@ -46,7 +46,7 @@ if __name__ == "__main__":
     try:
         fichero = KaraokeLocal(sys.argv[1])
     except(ValueError, IndexError):
-        print('Usage: python3 karaoke.py file.smil')
+        sys.exit('Usage: python3 karaoke.py file.smil')
     fichero.__str__()
     fichero.to_json(sys.argv[1])
     fichero.do_local()
